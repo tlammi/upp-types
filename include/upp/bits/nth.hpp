@@ -1,0 +1,46 @@
+#pragma once
+
+#include "upp/bits/pack.hpp"
+
+#include <cstddef>
+
+namespace upp{
+
+namespace detail{
+template<size_t I, class Pack, class=void>
+struct nth_impl;
+
+template<size_t I, class T, class... Ts>
+struct nth_impl<I, pack<T, Ts...>, std::enable_if_t<(I > 0)>>{
+    using type = nth_impl<I-1, pack<Ts...>>::type;
+};
+
+template<class T, class... Ts>
+struct nth_impl<0, pack<T, Ts...>>{
+    using type = T;
+};
+
+
+template<size_t I, auto V, auto... Vs>
+struct nth_impl<I, value_pack<V, Vs...>, std::enable_if_t<(I > 0)>>{
+    static constexpr auto value = nth_impl<I-1, value_pack<Vs...>>::value;
+};
+
+template<auto V, auto... Vs>
+struct nth_impl<0, value_pack<V, Vs...>>{
+    static constexpr auto value = V;
+};
+}
+
+template<size_t I, class Pack>
+using nth = detail::nth_impl<I, Pack>;
+
+
+template<size_t I, class Pack>
+using nth_t = typename nth<I, Pack>::type;
+
+template<size_t I, class Pack>
+static constexpr auto nth_v = nth<I, Pack>::value;
+
+
+}
