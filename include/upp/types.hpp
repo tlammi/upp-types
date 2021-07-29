@@ -6,4 +6,5 @@
 #include "upp/bits/pack_size.hpp"
 #include "upp/bits/is_in_pack.hpp"
 #include "upp/bits/select.hpp"
+#include "upp/bits/filter.hpp"
 
