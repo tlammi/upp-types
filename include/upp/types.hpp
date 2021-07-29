@@ -4,4 +4,5 @@
 #include "upp/bits/join.hpp"
 #include "upp/bits/nth.hpp"
 #include "upp/bits/pack_size.hpp"
+#include "upp/bits/is_in_pack.hpp"
 
