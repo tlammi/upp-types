@@ -2,6 +2,8 @@
 
 #include "upp/bits/pack.hpp"
 
+#include <cstddef>
+
 namespace upp{
 
 

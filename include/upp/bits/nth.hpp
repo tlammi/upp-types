@@ -1,6 +1,8 @@
 #pragma once
 
 #include "upp/bits/pack.hpp"
+#include "upp/bits/pack_size.hpp"
+
 
 #include <cstddef>
 
@@ -40,7 +42,20 @@ template<size_t I, class Pack>
 using nth_t = typename nth<I, Pack>::type;
 
 template<size_t I, class Pack>
-static constexpr auto nth_v = nth<I, Pack>::value;
+constexpr auto nth_v = nth<I, Pack>::value;
 
+
+template<class Pack>
+using first_t = nth_t<0, Pack>;
+
+template<class Pack>
+constexpr auto first_v = nth_v<0, Pack>;
+
+
+template<class Pack>
+using last_t = nth_t<pack_size_v<Pack>-1, Pack>;
+
+template<class Pack>
+constexpr auto last_v = nth_v<pack_size_v<Pack>-1, Pack>;
 
 }
