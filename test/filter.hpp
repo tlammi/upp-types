@@ -21,7 +21,7 @@ constexpr auto filter_cb = [](auto v){
     }
 };
 
-static_assert(std::is_same_v<filter_t<Input, filter_cb>, Expected>);
+static_assert(std::is_same_v<filter_t<Input, decltype(filter_cb)>, Expected>);
 
 
 using Expected2 = value_pack<0, 'c'>;
@@ -34,7 +34,7 @@ constexpr auto filter_cb2 = [](auto v){
     }
 };
 
-static_assert(std::is_same_v<filter_t<Input, filter_cb2>, Expected2>);
+static_assert(std::is_same_v<filter_t<Input, decltype(filter_cb2)>, Expected2>);
 }
 
 
@@ -46,28 +46,28 @@ using Expected = pack<float>;
 
 constexpr auto filter_cb = [](auto i){
     if constexpr(std::is_same_v<decltype(i), float>){
-        return true;
+        return keep;
     } else {
-        return false;
+        return remove;
     }
 };
 
-static_assert(std::is_same_v<filter_t<Input, filter_cb>, Expected>);
+static_assert(std::is_same_v<filter_t<Input, decltype(filter_cb)>, Expected>);
 
 
 using Expected2 = pack<int, char>;
 
 constexpr auto filter_cb2 = [](auto i){
     if constexpr(std::is_same_v<decltype(i), int>){
-        return true;
+        return keep;
     } else if constexpr (std::is_same_v<decltype(i), char>){
-        return true;
+        return keep;
     } else {
-        return false;
+        return remove;
     }
 };
 
-static_assert(std::is_same_v<filter_t<Input, filter_cb2>, Expected2>);
+static_assert(std::is_same_v<filter_t<Input, decltype(filter_cb2)>, Expected2>);
 
 }
 
