@@ -7,4 +7,5 @@
 #include "upp/bits/is_in_pack.hpp"
 #include "upp/bits/select.hpp"
 #include "upp/bits/filter.hpp"
+#include "upp/bits/conditional.hpp"
 
