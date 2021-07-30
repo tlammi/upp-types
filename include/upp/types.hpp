@@ -8,4 +8,5 @@
 #include "upp/bits/select.hpp"
 #include "upp/bits/filter.hpp"
 #include "upp/bits/conditional.hpp"
+#include "upp/bits/pop.hpp"
 
