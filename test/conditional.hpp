@@ -4,7 +4,7 @@
 
 #include <type_traits>
 
-using namespace upp;
+using namespace upp::types;
 
 
 static_assert(std::is_same_v<conditional_t<true, int, char>, int>);

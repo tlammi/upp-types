@@ -5,7 +5,7 @@
 #include "upp/types.hpp"
 
 
-using namespace upp;
+using namespace upp::types;
 
 namespace value_test{
 using Input = value_pack<0, 'c', 100.0>;

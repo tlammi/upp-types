@@ -3,7 +3,7 @@
 #include <type_traits>
 #include "upp/types.hpp"
 
-using namespace upp;
+using namespace upp::types;
 
 static_assert(pack_size_v<pack<>> == 0);
 static_assert(pack_size_v<value_pack<>> == 0);

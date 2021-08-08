@@ -2,7 +2,7 @@
 
 #include "upp/types.hpp"
 
-using namespace upp;
+using namespace upp::types;
 
 
 using Pack = value_pack<0, 1, 4, 100>;

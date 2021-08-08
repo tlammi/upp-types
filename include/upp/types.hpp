@@ -1,12 +1,12 @@
 #pragma once
 
-#include "upp/bits/pack.hpp"
-#include "upp/bits/join.hpp"
-#include "upp/bits/nth.hpp"
-#include "upp/bits/pack_size.hpp"
-#include "upp/bits/is_in_pack.hpp"
-#include "upp/bits/select.hpp"
-#include "upp/bits/filter.hpp"
-#include "upp/bits/conditional.hpp"
-#include "upp/bits/pop.hpp"
+#include "upp/types/bits/pack.hpp"
+#include "upp/types/bits/join.hpp"
+#include "upp/types/bits/nth.hpp"
+#include "upp/types/bits/pack_size.hpp"
+#include "upp/types/bits/is_in_pack.hpp"
+#include "upp/types/bits/select.hpp"
+#include "upp/types/bits/filter.hpp"
+#include "upp/types/bits/conditional.hpp"
+#include "upp/types/bits/pop.hpp"
 

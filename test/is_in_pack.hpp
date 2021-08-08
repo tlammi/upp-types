@@ -3,7 +3,7 @@
 #include "upp/types.hpp"
 
 
-using namespace upp;
+using namespace upp::types;
 
 
 using PackA = pack<int, double, float, char>;

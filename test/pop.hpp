@@ -4,7 +4,7 @@
 
 #include "upp/types.hpp"
 
-using namespace upp;
+using namespace upp::types;
 
 using Input = value_pack<0, 100, 99, 99, 'c'>;
 

@@ -2,7 +2,7 @@
 
 #include "upp/types.hpp"
 
-using namespace upp;
+using namespace upp::types;
 
 struct S{};
 
