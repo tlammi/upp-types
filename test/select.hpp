@@ -15,3 +15,6 @@ static_assert(max == 100);
 constexpr auto min = select_one_v<Pack, std::min<int>>;
 
 static_assert(min == 0);
+
+static_assert(max_v<Pack> == 100);
+static_assert(min_v<Pack> == 0);

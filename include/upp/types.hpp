@@ -9,3 +9,4 @@
 #include "upp/types/bits/pack_size.hpp"
 #include "upp/types/bits/pop.hpp"
 #include "upp/types/bits/select.hpp"
+#include "upp/types/bits/sort.hpp"
