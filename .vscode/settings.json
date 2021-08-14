@@ -1,0 +1,4 @@
+{
+    // Disable errors as IntelliSense does not yet support C++20 float NTTPs etc.
+    "C_Cpp.errorSquiggles": "Disabled"
+}

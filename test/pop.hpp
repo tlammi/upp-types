@@ -14,9 +14,7 @@ using Result = pop_first_value_t<100, Input>;
 
 static_assert(std::is_same_v<Result, Expected>);
 
-
 using Expected2 = value_pack<0, 100, 99, 'c'>;
 using Result2 = pop_first_value_t<99, Input>;
 
 static_assert(std::is_same_v<Result, Expected>);
-

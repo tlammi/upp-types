@@ -1,6 +1,7 @@
 #pragma once
 
 #include <type_traits>
+
 #include "upp/types.hpp"
 
 using namespace upp::types;
