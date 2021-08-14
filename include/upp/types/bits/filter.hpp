@@ -1,9 +1,10 @@
 #pragma once
 
+#include <type_traits>
+
 #include "upp/types/bits/join.hpp"
 #include "upp/types/bits/pack.hpp"
 #include "upp/types/bits/tags.hpp"
-
 namespace upp {
 namespace types {
 
